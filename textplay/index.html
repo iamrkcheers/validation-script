@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        button{
+            margin: 5px;
+        }
+    </style>
+    <script>
+        function show(){
+            var fn=document.getElementById("fn").value;
+            var ln=document.getElementById("ln").value;
+            /*var t1=fn;
+            var t2=ln;*/
+            document.getElementById("fn").value=ln;
+            document.getElementById("ln").value=fn;
+            document.getElementsByTagName("h1")[0].innerHTML="Hello"+" "+fn+" "+ln+" !";
+        }
+        function reset(){
+            document.getElementById("fn").value="";
+            document.getElementById("ln").value="";
+            document.getElementsByTagName("h1")[0].innerHTML="Hello User !";
+        }
+    </script>
+</head>
+<body>
+    <h1>Hello User !</h1>
+    First Name : <input type="text" id="fn"><br><br>
+    Ladt Name : <input type="text" id="ln"><br><br>
+    <div>
+    <button onclick="show()">Say Hello !</button><button onclick="reset()">Reset</button>
+    </div>
+</body>
+</html>
